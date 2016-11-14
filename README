@@ -1,5 +1,7 @@
 This is an implementation of progressive mesh, a famous algorithm that gradually simplifies a 3D model.
+
 The method practiced in this project generates high quality progressive mesh, which means the algorithm will find the optimal triangle within the mesh to collapse, and the resulting new vertices will be placed in the optimal position. This results in a simplified mesh that resembles the original mesh to the largest extent. 
+
 In another word, the visual quality of the simplified mesh has the least degradation compared to other implementation of progressive mesh, because the algorithm tries to retain the original geometric structure.
 
 You should be able to build the project using Visual Studio 2013. Please use "Start Without Debugging (Ctrl+F5)" to test it once it's built.
