@@ -1,3 +1,6 @@
+//Modified from OpenGL tutorial at http://in2gpu.com/
+//Thanks to their awesome tutorial!!!
+
 #include "Shader_Loader.h"
 
 using namespace Core;

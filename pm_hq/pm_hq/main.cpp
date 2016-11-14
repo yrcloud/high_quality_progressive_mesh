@@ -306,6 +306,11 @@ void mouseMotion (int x, int y)
 
 int main (int argc, char **argv)
 {
+	//Some test cases manually encoded.
+	//You should see the bunny model instead
+	//////////////////////////////////////////////////
+	//////////////////////////////////////////////////
+
 	//test 0 is a pyramid
 	/*
 	std::vector <VertexInfo> testVertices0;
@@ -380,6 +385,7 @@ int main (int argc, char **argv)
 	//PMTest0->collapseOneEdge();
 	//PMTest0->collapseOneEdge();
 	*/
+
 	
 
 	GLfloat testRenderingVertexPositions0[] = {3.f, 0.f, -2.f,
@@ -483,7 +489,9 @@ int main (int argc, char **argv)
 		testRenderingVertexNormals0[3*i+2] = theNormal.z;
 	}
 	*/
-	
+	/////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////	
 
 	g_vertexPositions = testRenderingVertexPositions1;
 	g_indices = testRenderingIndices0;

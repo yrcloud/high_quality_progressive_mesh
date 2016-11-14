@@ -1,4 +1,6 @@
-//This code is modified from Internet. Not totally original
+//This code for parsing OBJ models is modified from Github repo https://github.com/stcui/Obj-Loader/blob/master/obj_parser.cpp
+//I modified it to work for naive OBJ triangle meshes
+
 #include "objParser.h"
 
 char strequal(const char *s1, const char *s2)

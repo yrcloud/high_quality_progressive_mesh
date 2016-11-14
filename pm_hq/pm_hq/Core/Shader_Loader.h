@@ -1,3 +1,6 @@
+//Modified from OpenGL tutorial at http://in2gpu.com/
+//Thanks to their awesome tutorial!!!
+
 #ifndef __SHADER_LOADER_H__
 #define __SHADER_LOADER_H__
  
