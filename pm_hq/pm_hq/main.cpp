@@ -306,40 +306,6 @@ void mouseMotion (int x, int y)
 
 int main (int argc, char **argv)
 {
-	//Some test cases manually encoded.
-	//You should see the bunny model instead
-	//////////////////////////////////////////////////
-	//////////////////////////////////////////////////
-
-	//test 0 is a pyramid
-	/*
-	std::vector <VertexInfo> testVertices0;
-	std::vector <int> testFaces0;
-	testVertices0.push_back ( VertexInfo(glm::vec3 (3.f, 3.f, 1.f)));
-	testVertices0.push_back ( VertexInfo(glm::vec3 (1.f, 1.f, 1.f)));
-	testVertices0.push_back ( VertexInfo(glm::vec3 (2.f, 1.f, 3.f)));
-	testVertices0.push_back ( VertexInfo(glm::vec3 (4.f, 1.f, 1.f)));
-	testFaces0.push_back (0);  testFaces0.push_back(2);  testFaces0.push_back(3);
-	testFaces0.push_back (0);  testFaces0.push_back(1);  testFaces0.push_back(2);
-	testFaces0.push_back (2);  testFaces0.push_back(1);  testFaces0.push_back(3);
-	testFaces0.push_back (0);  testFaces0.push_back(3);  testFaces0.push_back(1);
-
-	PMConstruction *PMTest0 = new PMConstruction (&testVertices0, &testFaces0);
-	*/
-
-	//test 1 is for distance calculation
-	/*
-	glm::vec3 test1Point = glm::vec3 (-4.f, 4.1f, -3.f);
-	glm::vec3 test1Triangle[3];
-	test1Triangle[0] = glm::vec3 (-2.f, 0.f, 0.f);
-	test1Triangle[1] = glm::vec3 (2.f, 0.f, 0.f);
-	test1Triangle[2] = glm::vec3 (2.f, 2.f, 0.f);
-	float resultDist = 0.f;
-	glm::vec3 test1ResultProjection = getProjection (test1Point, test1Triangle, resultDist);
-	*/
-
-	//test 2 is a side of a complex geometry
-
 	std::vector <glm::vec3> parsedPoints;
 	std::vector <int> parsedIndices;
 	std::vector <obj_face> parsedObjFaces;
@@ -356,154 +322,13 @@ int main (int argc, char **argv)
 	PMConstruction *PMTest0 = new PMConstruction (&testVertices3, &testFaces3);
 	g_pm = PMTest0;
 
-	/*
-	std::vector <VertexInfo> testVertices2;
-	std::vector <int> testFaces2;
-	testVertices2.push_back ( VertexInfo(glm::vec3 (3.f, 0.f, -2.f)));//v0
-	testVertices2.push_back ( VertexInfo(glm::vec3 (1.f, 0.f, 0.f)));//v1
-	testVertices2.push_back ( VertexInfo(glm::vec3 (1.f, 1.f, -1.f)));//v2
-	testVertices2.push_back ( VertexInfo(glm::vec3 (-1.f, 1.f, 1.f)));//v3
-	testVertices2.push_back ( VertexInfo(glm::vec3 (0.f, -2.f, 0.5f)));//v4
-	testVertices2.push_back ( VertexInfo(glm::vec3 (1.f, -1.f, -1.f)));//v5
-	testVertices2.push_back ( VertexInfo(glm::vec3 (2.f, 3.f, 1.f)));//v6
-	testVertices2.push_back ( VertexInfo(glm::vec3 (0.f, 3.f, 0.f)));//v7
-
-	testFaces2.push_back (0);  testFaces2.push_back(2);  testFaces2.push_back(1); //f0
-	testFaces2.push_back (1);  testFaces2.push_back(2);  testFaces2.push_back(3); //f1
-	testFaces2.push_back (1);  testFaces2.push_back(3);  testFaces2.push_back(4); //f2
-	testFaces2.push_back (5);  testFaces2.push_back(1);  testFaces2.push_back(4); //f3
-	testFaces2.push_back (5);  testFaces2.push_back(0);  testFaces2.push_back(1); //f4
-	testFaces2.push_back (3);  testFaces2.push_back(2);  testFaces2.push_back(6); //f5
-	testFaces2.push_back (2);  testFaces2.push_back(0);  testFaces2.push_back(6); //f6
-	testFaces2.push_back (3);  testFaces2.push_back(6);  testFaces2.push_back(7); //f6
-
-	PMConstruction *PMTest0 = new PMConstruction (&testVertices2, &testFaces2);
-	g_pm = PMTest0;
-	//PMTest0->collapseOneEdge();
-	//PMTest0->collapseOneEdge();
-	//PMTest0->collapseOneEdge();
-	//PMTest0->collapseOneEdge();
-	//PMTest0->collapseOneEdge();
-	*/
-
-	
-
-	GLfloat testRenderingVertexPositions0[] = {3.f, 0.f, -2.f,
-											1.f, 0.f, 0.f,
-											1.f, 1.f, -1.f,
-											-1.f, 1.f, 1.f,
-											0.f, -2.f, 0.5f,
-											1.f, -1.f, -1.f,
-											2.f, 3.f, 1.f,
-											0.f, 3.f, 0.f};
-	GLuint testRenderingIndices0[] = {0, 2, 1,
-									 1, 2, 3,
-									 1, 3, 4,
-									 5, 1, 4, 
-									 5, 0, 1,
-									 3, 2, 6,
-									 2, 0, 6,
-									 3, 6, 7};
-	float testRenderingVertexNormals0[] = {3.f, 0.f, -2.f,
-										1.f, 0.f, 0.f,
-										1.f, 1.f, -1.f,
-										-1.f, 1.f, 1.f,
-										0.f, -2.f, 0.5f,
-										1.f, -1.f, -1.f,
-										2.f, 3.f, 1.f,
-										0.f, 3.f, 0.f};
-
-	float testRenderingVertexPositions1[] = {0.75f, 0.75f, 0.0f, 1.0f,
-											0.75f, -0.75f, 0.0f, 1.0f,
-											-0.75f, -0.75f, 0.0f, 1.0f,
-											};
-	float testRenderingVertexPositions2[] = {0.f, 1.f, -3.f, 
-											-2.f, -1.f -4.f, 
-											2.f, -1.f, -4.f};
-	GLuint testRenderingIndices3[] = {0, 1, 2};
-													
-	std::vector<VertexFormat> testRenderingVertexPosVector; 
-	/*
-	testRenderingVertexPosVector.push_back (VertexFormat(glm::vec3(0.75f, 0.75f, 0.0f)));
-	testRenderingVertexPosVector.push_back (VertexFormat(glm::vec3(0.75f, -0.75f, 0.0f)));
-	testRenderingVertexPosVector.push_back (VertexFormat(glm::vec3(-0.75f, -0.75f, 0.0f)));
-	*/
-	/*
-	testRenderingVertexPosVector.push_back (VertexFormat(glm::vec3(0.f, 3.f, -3.f)));
-	testRenderingVertexPosVector.push_back (VertexFormat(glm::vec3(-2.f, -1.f, -4.f)));
-	testRenderingVertexPosVector.push_back (VertexFormat(glm::vec3(2.f, -1.f, -4.f)));
-	*/
-	testRenderingVertexPosVector.push_back (VertexFormat(glm::vec3(3.f, 0.f, -2.f), glm::vec3(3.f, 0.f, -2.f)));
-	testRenderingVertexPosVector.push_back (VertexFormat(glm::vec3(1.f, 0.f, 0.f), glm::vec3(3.f, 0.f, -2.f)));
-	testRenderingVertexPosVector.push_back (VertexFormat(glm::vec3(1.f, 1.f, -1.f), glm::vec3(3.f, 0.f, -2.f)));
-	testRenderingVertexPosVector.push_back (VertexFormat(glm::vec3(-1.f, 1.f, 1.f), glm::vec3(3.f, 0.f, -2.f)));
-	testRenderingVertexPosVector.push_back (VertexFormat(glm::vec3(0.f, -2.f, 0.5f), glm::vec3(3.f, 0.f, -2.f)));
-	testRenderingVertexPosVector.push_back (VertexFormat(glm::vec3(1.f, -1.f, -1.f), glm::vec3(3.f, 0.f, -2.f)));
-	testRenderingVertexPosVector.push_back (VertexFormat(glm::vec3(2.f, 3.f, 1.f), glm::vec3(3.f, 0.f, -2.f)));
-	testRenderingVertexPosVector.push_back (VertexFormat(glm::vec3(0.f, 3.f, 0.f), glm::vec3(3.f, 0.f, -2.f)));
-
-	std::vector<GLuint> testRenderingVertexPosVectorIndices;
-	testRenderingVertexPosVectorIndices.push_back (0);
-	testRenderingVertexPosVectorIndices.push_back (2);
-	testRenderingVertexPosVectorIndices.push_back (1);
-
-	testRenderingVertexPosVectorIndices.push_back (1);
-	testRenderingVertexPosVectorIndices.push_back (2);
-	testRenderingVertexPosVectorIndices.push_back (3);
-
-	testRenderingVertexPosVectorIndices.push_back (1);
-	testRenderingVertexPosVectorIndices.push_back (3);
-	testRenderingVertexPosVectorIndices.push_back (4);
-
-	testRenderingVertexPosVectorIndices.push_back (5);
-	testRenderingVertexPosVectorIndices.push_back (1);
-	testRenderingVertexPosVectorIndices.push_back (4);
-
-	testRenderingVertexPosVectorIndices.push_back (5);
-	testRenderingVertexPosVectorIndices.push_back (0);
-	testRenderingVertexPosVectorIndices.push_back (1);
-
-	testRenderingVertexPosVectorIndices.push_back (3);
-	testRenderingVertexPosVectorIndices.push_back (2);
-	testRenderingVertexPosVectorIndices.push_back (6);
-
-	testRenderingVertexPosVectorIndices.push_back (2);
-	testRenderingVertexPosVectorIndices.push_back (0);
-	testRenderingVertexPosVectorIndices.push_back (6);
-
-	testRenderingVertexPosVectorIndices.push_back (3);
-	testRenderingVertexPosVectorIndices.push_back (6);
-	testRenderingVertexPosVectorIndices.push_back (7);
-
-
-	g_vertexPosVector = &testRenderingVertexPosVector;
-	g_vertexPosVectorIndices = &testRenderingVertexPosVectorIndices;
-
-
-	/*
-	for (int i=0; i<g_numTriangles; i++)
-	{
-		glm::vec3 theNormal = generateTestNormal (testRenderingVertexPositions0, testRenderingIndices0, i);
-		testRenderingVertexNormals0[3*i] = theNormal.x;
-		testRenderingVertexNormals0[3*i+1] = theNormal.y;
-		testRenderingVertexNormals0[3*i+2] = theNormal.z;
-	}
-	*/
-	/////////////////////////////////////////////////////////////////////////////////
-	////////////////////////////////////////////////////////////////////////////////
-	////////////////////////////////////////////////////////////////////////////////	
-
-	g_vertexPositions = testRenderingVertexPositions1;
-	g_indices = testRenderingIndices0;
-	g_vertexNormals = testRenderingVertexNormals0;
-
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA);
     glutInitWindowPosition(100, 100);
 
     glutInitWindowSize(1024, 1024);
 
-    glutCreateWindow("Drawing my first triangle");
+    glutCreateWindow("Progressive Bunny!! Press or hold Space to simplify it");
     glewInit();
  
     Init();
