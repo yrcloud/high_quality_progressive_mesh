@@ -4,7 +4,7 @@ The method practiced in this project generates high quality progressive mesh, wh
 
 In another word, the visual quality of the simplified mesh has the least degradation compared to other implementation of progressive mesh, because the algorithm tries to retain the original geometric structure.
 
-You can use this code to simplify some OBJ 3D modles of your own!
+You can use this code to simplify some OBJ 3D modles of your own! The current source code uses the famous "Stanford Bunny" model.
 
 You should be able to build the project using Visual Studio 2013. Please use "Start Without Debugging (Ctrl+F5)" to test it once it's built.
 
