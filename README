@@ -8,5 +8,5 @@ You can use this code to simplify some OBJ 3D modles of your own! The current so
 
 You should be able to build the project using Visual Studio 2013. Please use "Start Without Debugging (Ctrl+F5)" to test it once it's built.
 
-Press or hould Space bar to simplify the mesh.
+Press or hold Space bar to simplify the mesh.
 
