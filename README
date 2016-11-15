@@ -10,3 +10,6 @@ You should be able to build the project using Visual Studio 2013. Please use "St
 
 Press or hold Space bar to simplify the mesh.
 
+
+The progressive mesh data structure is in the class "PMConstruction".
+The function that simplifies the mesh by one step is "PMConstruction::collapseOneEdge()", which gets called when you press Space Bar.
